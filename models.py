@@ -2,11 +2,13 @@
 from sqlalchemy import Column, Integer, String, DateTime, func
 from sqlalchemy.ext.declarative import declarative_base
 
+
 Base = declarative_base()
+DSN = "postgresql://app:1234@127.0.0.1:5431/netology"
 
 
 class Advert(Base):
-    
+
     __tablename__ = "adverts"
 
     id = Column(Integer, primary_key=True)
